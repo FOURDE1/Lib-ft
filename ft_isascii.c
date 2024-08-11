@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 14:44:05 by hraad             #+#    #+#             */
-/*   Updated: 2024/08/11 18:32:30 by hraad            ###   ########.fr       */
+/*   Created: 2024/08/11 18:27:43 by hraad             #+#    #+#             */
+/*   Updated: 2024/08/11 18:35:02 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int	main(void)
+int	ft_isascii(int c)
 {
-	printf("%d\n", ft_isalpha('2'));
-	printf("%d\n", ft_isalpha('A'));
-	printf("%d\n", ft_isdigit('1'));
-	printf("%d\n", ft_isdigit('A'));
-	printf("%d\n", ft_isalnum('\n'));
-	printf("%d\n", ft_isalnum('A'));
-	printf("%d\n", ft_isascii('A'));
+	if (c >= 0 && c <= 127)
+		return (1);
 	return (0);
 }

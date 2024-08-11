@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 14:44:05 by hraad             #+#    #+#             */
-/*   Updated: 2024/08/11 18:32:30 by hraad            ###   ########.fr       */
+/*   Created: 2024/08/11 22:22:31 by hraad             #+#    #+#             */
+/*   Updated: 2024/08/11 22:42:50 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdlib.h>
 
-int	main(void)
+void	*memset(void *s, int c, size_t n)
 {
-	printf("%d\n", ft_isalpha('2'));
-	printf("%d\n", ft_isalpha('A'));
-	printf("%d\n", ft_isdigit('1'));
-	printf("%d\n", ft_isdigit('A'));
-	printf("%d\n", ft_isalnum('\n'));
-	printf("%d\n", ft_isalnum('A'));
-	printf("%d\n", ft_isascii('A'));
-	return (0);
+	size_t		i;
+	char		*ptr;
+
+	i = 0;
+	ptr = (char *)s;
+	while (i < n)
+		ptr[i++] = (char)c;
+	return (s);
 }

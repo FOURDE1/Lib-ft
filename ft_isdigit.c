@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 14:44:05 by hraad             #+#    #+#             */
-/*   Updated: 2024/08/11 18:32:30 by hraad            ###   ########.fr       */
+/*   Created: 2024/08/11 18:06:57 by hraad             #+#    #+#             */
+/*   Updated: 2024/08/11 18:08:40 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int	main(void)
+int	ft_isdigit(int c)
 {
-	printf("%d\n", ft_isalpha('2'));
-	printf("%d\n", ft_isalpha('A'));
-	printf("%d\n", ft_isdigit('1'));
-	printf("%d\n", ft_isdigit('A'));
-	printf("%d\n", ft_isalnum('\n'));
-	printf("%d\n", ft_isalnum('A'));
-	printf("%d\n", ft_isascii('A'));
+	if (c >= 48 && c <= 57)
+		return (1);
 	return (0);
 }

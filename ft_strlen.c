@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 14:44:05 by hraad             #+#    #+#             */
-/*   Updated: 2024/08/11 18:32:30 by hraad            ###   ########.fr       */
+/*   Created: 2024/08/11 18:40:31 by hraad             #+#    #+#             */
+/*   Updated: 2024/08/11 22:28:16 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdlib.h>
 
-int	main(void)
+size_t	ft_strlen(const char *s)
 {
-	printf("%d\n", ft_isalpha('2'));
-	printf("%d\n", ft_isalpha('A'));
-	printf("%d\n", ft_isdigit('1'));
-	printf("%d\n", ft_isdigit('A'));
-	printf("%d\n", ft_isalnum('\n'));
-	printf("%d\n", ft_isalnum('A'));
-	printf("%d\n", ft_isascii('A'));
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
