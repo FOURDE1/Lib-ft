@@ -6,7 +6,7 @@
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 04:19:15 by hraad             #+#    #+#             */
-/*   Updated: 2024/08/12 06:16:57 by hraad            ###   ########.fr       */
+/*   Updated: 2024/08/12 06:45:47 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ static	void	*ft_memcpy_rev(void *dest, const void *src, size_t n)
 	unsigned char	*s;
 
 	i = n;
-	if (!dest || !src)
-		return (0);
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
 	while (i > 0)
