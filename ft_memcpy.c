@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 23:46:58 by hraad             #+#    #+#             */
-/*   Updated: 2024/08/11 23:47:01 by hraad            ###   ########.fr       */
+/*   Created: 2024/08/11 23:51:39 by hraad             #+#    #+#             */
+/*   Updated: 2024/08/12 00:21:36 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	size_t			i;
+	unsigned char	*d;
+	unsigned char	*s;
+
+	i = 0;
+	if (!dest && !src)
+		return (0);
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dest);
 }

@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 14:44:05 by hraad             #+#    #+#             */
-/*   Updated: 2024/08/11 23:39:04 by hraad            ###   ########.fr       */
+/*   Created: 2024/08/12 03:16:39 by hraad             #+#    #+#             */
+/*   Updated: 2024/08/12 03:49:19 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdlib.h>
 
-int	main(void)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char	str[50] = "Hello, World!";
+	size_t	i;
+	size_t	j;
 
-	ft_memset(str + 7, '*', 5);
-	printf("%s\n", str);
+	if (ft_strlen(little) == 0)
+		return ((char *)big);
+	i = 0;
+	while (i < len && big[i] != '\0')
+	{
+		j = 0;
+		if (big[i] == little[j])
+		{
 
-	return (0);
+			while (big[j + i] == little[j] && j + i < len && little[j] != '\0')
+			{
+				j++;
+			}
+			if (j == ft_strlen(little))
+				return ((char *)(big + i));
+		}
+		i++;
+	}
+	return (NULL);
 }
