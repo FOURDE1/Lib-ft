@@ -6,7 +6,7 @@
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 01:33:43 by fourde            #+#    #+#             */
-/*   Updated: 2024/08/12 05:36:26 by hraad            ###   ########.fr       */
+/*   Updated: 2024/08/13 02:17:12 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,12 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 int			ft_atoi(const char *nptr);
 void		*ft_memmove(void *dest, const void *src, size_t n);
+size_t		ft_strlcpy(char *dst, const char *src, size_t size);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
+void		*ft_calloc(size_t nmemb, size_t size);
+char		*ft_strdup(const char *s);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putendl_fd(char *s,int fd);
+void		ft_putnbr_fd(int n, int fd);
 #endif
