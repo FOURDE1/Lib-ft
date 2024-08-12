@@ -6,7 +6,7 @@
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 03:16:39 by hraad             #+#    #+#             */
-/*   Updated: 2024/08/12 03:49:19 by hraad            ###   ########.fr       */
+/*   Updated: 2024/08/12 05:35:42 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		j = 0;
 		if (big[i] == little[j])
 		{
-
 			while (big[j + i] == little[j] && j + i < len && little[j] != '\0')
 			{
 				j++;

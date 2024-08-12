@@ -6,7 +6,7 @@
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 01:33:43 by fourde            #+#    #+#             */
-/*   Updated: 2024/08/12 03:55:39 by hraad            ###   ########.fr       */
+/*   Updated: 2024/08/12 05:36:26 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ int			ft_isprint(int c);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 int			ft_atoi(const char *nptr);
+void		*ft_memmove(void *dest, const void *src, size_t n);
 #endif
