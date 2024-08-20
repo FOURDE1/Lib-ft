@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/13 02:14:14 by hraad             #+#    #+#             */
-/*   Updated: 2024/08/17 16:21:33 by hraad            ###   ########.fr       */
+/*   Created: 2024/08/19 00:39:24 by hraad             #+#    #+#             */
+/*   Updated: 2024/08/19 00:58:01 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_putnbr_fd(int n, int fd)
+int	:static isfound()
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned int	num;
-	char			buffer[10];
-	int				i;
+	size_t	i;
+	char	*ptr;
+	size_t	size;
+	size_t	start;
+	size_t	end;
 
-	if (n < 0)
+	if (!s1 || !set)
+		return (NULL);
+	size = ft_strlen(s1);
+	if (size == 0)
 	{
-		ft_putchar_fd('-', fd);
-		num = -n;
+		ptr = (char *)malloc(1 * sizeof(char));
+		ptr[0] = '\0';
+		return (ptr);
 	}
-	else
-		num = n;
-	if (num == 0)
+	if (ft_strlen(set) == 0)
 	{
-		ft_putchar_fd('0', fd);
-		return ;
+		ptr = (char *)malloc((size + 1) * sizeof(char));
+		ft_strlcpy(ptr, s1, (size + 1));
+		return (ptr);
 	}
-	i = 0;
-	while (num > 0)
-	{
-		buffer[i++] = (num % 10) + '0';
-		num /= 10;
-	}
-	while (i > 0)
-		ft_putchar_fd(buffer[--i], fd);
 }
