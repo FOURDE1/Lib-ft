@@ -6,7 +6,7 @@
 /*   By: hraad <hraad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 00:39:24 by hraad             #+#    #+#             */
-/*   Updated: 2024/08/20 15:57:17 by hraad            ###   ########.fr       */
+/*   Updated: 2024/08/21 21:39:00 by hraad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	start = (char *)s1;
-	end = start + isfound(s1);
+	end = start + ft_strlen(s1);
 	while (*start && isfound(*start, set))
 		++start;
 	while (start < end && isfound(*(end - 1), set))
@@ -40,6 +40,6 @@ static	int	isfound(char c, char const *set)
 	i = 0;
 	while (set[i] != '\0')
 		if (c == set[i++])
-			retrun (1);
+			return (1);
 	return (0);
 }
